@@ -23,6 +23,7 @@ const config = {
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
   module: {
+    /*
     rules: [
       {
         test: /\.(js|jsx)$/i,
@@ -36,6 +37,28 @@ const config = {
     // Add your rules for custom modules here
     // Learn more about loaders from https://webpack.js.org/loaders/
     ],
+    */
+
+    rules: [
+      {
+        test: /\.(scss)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
+      },
+    ],
+
   },
 };
 
