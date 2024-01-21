@@ -66,7 +66,7 @@ module.exports = () => {
   if (isProduction) {
     config.mode = 'production';
   } else {
-    config.mode = 'development';
+    config.mode = process.env.NODE_ENV || 'development';
   }
   return config;
 };
