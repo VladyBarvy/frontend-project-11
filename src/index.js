@@ -1,7 +1,8 @@
+/* eslint-disable */
 import './styles.scss';
 import 'bootstrap';
-// import app from './app.js';
+import app from './app.js';
 
-// app();
+app();
 
 // console.log('Hello World!');
