@@ -8,3 +8,8 @@
 
 #### URL project #
 <https://frontend-project-11-lkmv.vercel.app>
+
+Для тестового запуска веб-приложения из терминала VS Code необходимо в терминал ввести и сполнить команду:
+```
+npx webpack serve
+```
