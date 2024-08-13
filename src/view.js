@@ -1,21 +1,25 @@
-import onChange from 'on-change';
-  
+function view(path, value) {
+  const input = document.querySelector('#url-input');
+  const feedback = document.querySelector('.feedback');
 
+  /* const render = (watchedState, i18n) => {
 
+  }; */
 
-const state = {
-  url_form: {
-      isValid: false,
-  },
-};
+  switch (path) {
+    case 'form.status':
+      if (value === 'invalid') {
+        input.classList.add('is-invalid');
+      } else {
+        input.classList.remove('is-invalid');
+      }
+      break;
+    case 'form.errors':
+      feedback.textContent = value;
+      break;
+    default:
+      throw new Error('incorrect view');
+  }
+}
 
-
-const render = (path, value) => {
-  result.textContent = value;
-};
-
-
-  // View  
-  const watchedState = onChange(state, render);
-
-export default watchedState;
+export default view;
